@@ -132,6 +132,7 @@ if uploaded_file is not None:
 
 
     elif mode == 'Binary':
+        # hitam putih
         # Slider untuk intensitas dan threshold
         # binary_intensity = st.slider('Adjust Binary Intensity', min_value=0, max_value=100, value=100)
         binary_intensity = 100
@@ -156,8 +157,9 @@ if uploaded_file is not None:
 
         processed_image = Image.fromarray(result)
     elif mode == 'Saturation':
+        # itensitas atau kekuatan warna
         saturation = st.slider('Adjust Saturation', min_value=0, max_value=200, value=100)
-
+        # misal panjang x lebar x 4 (rgba)
         img_array = np.array(image.convert('RGB'))
         grayscale = np.dot(img_array[..., :3], [0.299, 0.587, 0.114])
         grayscale = np.stack([grayscale] * 3, axis=-1)
@@ -168,8 +170,8 @@ if uploaded_file is not None:
         processed_image = Image.fromarray(result)
 
     elif mode == 'Posterize':
+        # mengurangi jumlah warna
         levels = st.slider('Color Levels', min_value=2, max_value=8, value=4)
-
         img_array = np.array(image.convert('RGB'))
         result = (img_array // (256 // levels)) * (256 // levels)
         result = result.astype(np.uint8)
