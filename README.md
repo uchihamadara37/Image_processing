@@ -7,4 +7,4 @@
 ### team
 1. Andrea Alfian S | 123220078
 2. Sakti Maulana I |
-3. Naufal Laudza R | 
+3. Naufal Laudza R | 123220093
