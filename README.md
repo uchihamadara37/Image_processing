@@ -25,7 +25,7 @@ cd Image_processing
 ```bash
 # Windows
 python -m venv venv
-.venv\Scripts\activate
+.\venv\Scripts\activate
 
 # macOS/Linux
 python3 -m venv venv
